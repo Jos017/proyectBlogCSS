@@ -8,6 +8,7 @@
     --complement-one: #a186e9;
     --complement-two: #95cd5f; 
     --just-white: #ffffff;
+    --just-black: #000000;
 }
 
 * {
@@ -28,7 +29,7 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--black);
+    color: var(--just-black);
 }
 
 header {
@@ -87,7 +88,7 @@ header .nav__about {
 }
 header .nav__about a {
     font-size: 1.6rem;
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--just-black);
 }
 
 .home-hero {
@@ -110,10 +111,10 @@ header .nav__about a {
     color: var(--just-white);
 }
 .home-hero__button {
-    padding: 16px;
+    padding: 12px;
     border: 1px solid var(--medium-gray);
     border-radius: 5px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     font-weight: 700;
     align-self: flex-start;
