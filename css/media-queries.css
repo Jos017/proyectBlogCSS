@@ -1,0 +1,14 @@
+@media (min-width: 768px) {
+    .principal__container {
+        grid-template-columns: 3fr 2fr;
+    }
+    .secondary__blog-card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 426px) {
+    header .social__icons {
+        margin: 0 auto;
+    }
+}
