@@ -1,5 +1,5 @@
 :root {
-    --primary: #48cfad;
+    /* --primary: #48cfad;
     --secondary: #22272d;
     --light-gray: #dfe3e9;
     --medium-gray: #c3c9d3;
@@ -7,6 +7,15 @@
     --black: #1f2427;
     --complement-one: #a186e9;
     --complement-two: #95cd5f; 
+    --just-white: #ffffff;
+    --just-black: #000000; */
+    --primary: #111111;
+    --secondary: #e31c25;
+    --complement-one: #bb000e;
+    --light-gray: #dfe3e9;
+    --medium-gray: #c3c9d3;
+    --dark-gray: #59626d;
+    --black: #161616;
     --just-white: #ffffff;
     --just-black: #000000;
 }
@@ -22,7 +31,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Quicksand', sans-serif;
     width: 100%;
     min-width: 320px;
 }
@@ -62,6 +71,7 @@ header .header__nav {
     max-height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: var(--secondary);
 }
 header .nav__logo {
     min-height: 0;
@@ -88,7 +98,8 @@ header .nav__about {
 header .nav__about a {
     font-weight: 700;
     font-size: 1.6rem;
-    border-bottom: 1px solid var(--just-black);
+    color: var(--just-white);
+    border-bottom: 1px solid var(--just-white);
 }
 
 .home-hero {
@@ -99,7 +110,7 @@ header .nav__about a {
     text-align: center;
     justify-items: center;
     align-items: center;
-    background-image: url(../assets/images/cover.png);
+    background-image: url(../assets/images/my-blog/hero-background.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -112,13 +123,15 @@ header .nav__about a {
 }
 .home-hero__button {
     padding: 12px;
-    border: 1px solid var(--medium-gray);
     border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 2rem;
     font-weight: 700;
     align-self: flex-start;
-    background-color: var(--primary);
+    background-color: var(--secondary);
+}
+.home-hero__button:hover {
+    background-color: var(--complement-one);
 }
 
 .blogs-main {
@@ -147,6 +160,7 @@ header .nav__about a {
     width: 100%;
     display: grid;
     align-items: center;
+    justify-items: center;
     gap: 50px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
@@ -154,7 +168,7 @@ header .nav__about a {
     align-self: flex-start;
 }
 .principal__image img {
-    width: 100%;
+    max-width: 100%;
     object-fit: contain;
 }
 .principal__info {
@@ -167,9 +181,10 @@ header .nav__about a {
 .principal__info h2 {
     font-size: 2.4rem;
     font-weight: 700;
+    margin-bottom: 16px;
 }
 .principal__info p {
-    margin: 16px 0;
+    margin: 8px 0;
     font-size: 1.6rem;
     font-weight: 500;
 }
@@ -180,9 +195,12 @@ header .nav__about a {
     width: fit-content;
     height: fit-content;
     display: inline-block;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
     font-size: 1.2rem;
     font-weight: 500;
+}
+.blogs-button--news {
+    margin-top: 20px;
 }
 .blogs-main__secondary {
     width: 100%;
@@ -214,6 +232,10 @@ header .nav__about a {
 .blog-card__image img {
     width: 100%;
     object-fit: contain;
+}
+.blog-card__image--kobe img{
+    max-width: 100%;
+    height: 300px;
 }
 .blog-card__title {
     margin: 20px 0 28px;
@@ -283,23 +305,30 @@ header .nav__about a {
 }
 .blogpost__image {
     width: 95%;
-    margin: 0 auto;
+    margin: 20px auto 0;
+    text-align: center;
 }
 .blogpost__image img {
-    width: 100%;
+    max-width: 100%;
     object-fit: contain;
 }
+.blogpost__image--banner {
+    width: 70%;
+}
 .blogpost__section {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     padding: 48px 0 20px;
     border-bottom: 1px solid var(--medium-gray);
     font-size: 2rem;
 }
 .blogpost__article {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     padding-bottom: 28px;
+}
+.blogpost__article .blogpost__image {
+    margin-bottom: 20px;
 }
 .blogpost__article h3{
     margin: 36px 0;
@@ -323,6 +352,7 @@ footer {
 }
 footer p {
     padding: 8px;
+    font-weight: 500;
     font-size: 1.6rem;
     color: var(--just-white);
 }
